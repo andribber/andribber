@@ -1,0 +1,153 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace contatos {
+    class listaContato {
+
+        private Elemento Inicio;
+        private Elemento Fim;
+        private Elemento Aux;
+
+        public int Tamanho;
+
+        public listaContato () {
+            Inicio = null;
+            Fim = null;
+        }
+
+        public void inserirContato(string nome, string numero) {
+            Elemento Novo = new Elemento();
+
+            Novo.Nome = nome;
+            Novo.Numero = numero;
+            
+            if(Inicio == null) {
+                Inicio = Novo;
+                Fim = Novo;
+                Novo.Proximo = null; 
+            }else {
+                Novo.Proximo = Inicio; //aponta para o inicio???????
+                Inicio = Novo;
+            }
+            Tamanho++;
+
+        }
+
+        public void mostraLista() {
+
+            Aux = Inicio;
+
+            if (Inicio == null) {
+                Console.Write("Não há contatos cadastrados nessa lista\n\n");
+                 
+            }else {
+                Console.WriteLine("Nessa lista de contatos há {0} contatos", Tamanho);
+                while (Aux != null) {
+                    
+                    
+                    Console.WriteLine("Nome: {0}", Aux.Nome);
+                    Console.WriteLine("Número: {0}", Aux.Numero);
+                    Console.WriteLine("----------------------------------");
+                    Aux=Aux.Proximo;
+                }
+            }
+        }
+
+        public void pegaDados() {
+            string nome;
+            string numero;
+            Console.WriteLine("Qual o nome do contato novo?");
+            nome = Console.ReadLine();
+            Console.WriteLine("Qual o número desse contato?");
+            numero = Console.ReadLine();
+
+            inserirContato(nome, numero);
+
+        }
+
+
+    }
+}
+
+
+
+
+
+--------------------------------------------------------------------------------------
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace contatos {
+    class Elemento {
+
+        public string Nome;
+        public string Numero;
+        public Elemento Proximo;
+
+        public Elemento () {
+            Nome = null;
+            Numero = null;
+            Proximo = null;
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+-------------------------------------------------------
+
+
+
+
+using System;
+
+namespace contatos {
+    class Program {
+        static void Main(string[] args) {
+            
+            listaContato novaLista = new listaContato();
+
+            menu(novaLista);
+
+            
+        }
+        static void menu(listaContato listaNova) {
+            Console.WriteLine("SEUS CONTATOS");
+            Console.WriteLine("1 - MOSTRAR CONTATOS");
+            Console.WriteLine("2 - INSERIR CONTATOS");
+            Console.WriteLine("3 - ENCERRAR SISTEMA");
+
+            int x = int.Parse(Console.ReadLine());
+
+            switch (x) {
+                case 1:
+                    listaNova.mostraLista();
+                    menu(listaNova);
+                    break;
+                case 2:
+                    listaNova.pegaDados();
+                    menu(listaNova);
+                    break;
+                case 3: 
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.Write("Opção inválida");
+                    menu(listaNova);
+                    break;
+
+            }
+        }
+    }
+}
