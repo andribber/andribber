@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @andribber
 - 👀 I’m interested in code and get better everyday
-- 🌱 I’m currently learning JAVA and Web Development 
+- 🌱 I’m currently learning C# 
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me @ribber1
 
