@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @andribber
-- 👀 I'm a backend developer.
-- 🌱 I’m currently learning PHP with Laravel Framework
+- 👀 I'm currently working as Backend Developer.
+- 🌱 I’m currently learning PHP and Laravel Framework
 - 💞️ I’m looking to collaborate on backend projects that uses PHP and Laravel.
 - 📫 How to reach me @ribber1
 
