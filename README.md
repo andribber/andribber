@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @andribber
-- 👀 I’m interested in code and get better everyday
-- 🌱 I’m currently learning C# 
-- 💞️ I’m looking to collaborate on ...
+- 👀 I'm a backend developer.
+- 🌱 I’m currently learning PHP with Laravel Framework
+- 💞️ I’m looking to collaborate on backend projects that uses PHP and Laravel.
 - 📫 How to reach me @ribber1
 
 <!---
